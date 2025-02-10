@@ -17,6 +17,8 @@ source venv/bin/activate
 python3 -m pip install -e .
 ```
 
+## Further information
+
 ### Initialization of the Future Match Table
 $$
 F(u, v) =
@@ -27,9 +29,6 @@ F(u, v) =
 $$
 
 ### Edge Structure Constraint Check
-
-To check the edge structure constraint:
-
 $$
 \text{if} \quad A_1[u, w] \neq A_2[v, w']: \quad F(w, w') = 0
 $$
