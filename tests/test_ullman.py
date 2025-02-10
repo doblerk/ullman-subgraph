@@ -1,6 +1,6 @@
 import unittest
 import networkx as nx
-from ullman import Ullman
+from ullman import ullman_algorithm
 
 
 class TestUllmanAlgorithm(unittest.TestCase):
@@ -14,7 +14,7 @@ class TestUllmanAlgorithm(unittest.TestCase):
         A1 = nx.adjacency_matrix(g1).todense()
         A2 = nx.adjacency_matrix(g2).todense()
 
-        self.assertTrue(Ullman(g1, g2, A1, A2))
+        self.assertTrue(ullman_algorithm.UllmanAlgorithm(g1, g2, A1, A2))
 
 if __name__ == '__main__':
     unittest.main()

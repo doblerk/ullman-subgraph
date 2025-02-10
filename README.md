@@ -17,12 +17,20 @@ source venv/bin/activate
 python3 -m pip install -e .
 ```
 
-## Example usage
-```python
-# Example from main.py
-...
-```
+### Initialization of the Future Match Table
 
-## Further information
-To check edge adjcacency constraint:
--> latex
+\[
+F(u, v) =
+\begin{cases}
+1, & \text{if } \deg(u) \leq \deg(v) \\
+0, & \text{otherwise}
+\end{cases}
+\]
+
+### Edge Structure Constraint Check
+
+To check the edge structure constraint:
+
+\[
+\text{if} \quad A[u, w] \neq A[v, w']: \quad F(w, w') = 0
+\]
