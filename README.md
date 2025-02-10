@@ -1,4 +1,4 @@
-#   Ullman Subgraph Isomorphism Test
+#   Ullman's Subgraph Isomorphism Test
 
 This repository contains the implementation of the Ullman algorithm to test whether one graph is a subgraph of another.
 
