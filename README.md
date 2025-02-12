@@ -17,6 +17,21 @@ source venv/bin/activate
 python3 -m pip install -e .
 ```
 
+## Example usage
+```python
+import networkx as nx
+from ullman.ullman_algorithm import UllmanAlgorithm
+
+g1 = nx.Graph()
+g1.add_edges_from([(0, 1), (1, 2)])
+
+g2 = nx.Graph()
+g2.add_edges_from([(0, 1), (1, 2), (2, 3)])
+
+ullman = UllmanAlgorithm(g2, g2)
+is_subgraph = ullman.is_subgraph_isomorphic()
+```
+
 ## Further information
 
 ### Initialization of the Future Match Table
