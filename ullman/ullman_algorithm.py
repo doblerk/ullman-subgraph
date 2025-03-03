@@ -170,8 +170,8 @@ class UllmanAlgorithm:
             
             self.update_F(F_tmp, row, col)
             
-            unmapped_rows = list(range(row + 1, len(F_tmp)))
-            unmapped_cols = list(np.setdiff1d(list(range(F_tmp.shape[1])), [col]))
+            unmapped_rows = range(row + 1, len(F_tmp))
+            unmapped_cols = np.setdiff1d(range(F_tmp.shape[1]), [col])
 
             self.check_constraint(F_tmp, row, col, unmapped_rows, unmapped_cols)
 
@@ -201,7 +201,4 @@ class UllmanAlgorithm:
         
         F = self.init_future_matching_table()
 
-        if self._ullman_recursive(F, 0):
-            return True
-    
-        return False
+        return self._ullman_recursive(F, 0)
